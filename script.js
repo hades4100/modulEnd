@@ -1,11 +1,15 @@
 import { gun } from "./gun.js";
 import { getcurrentuser, setcurrentuser, user, userlist } from "./users.js";
 export function showwelcome() {
-  let cuser = getcurrentuser();
-  let welcome = document.getElementById("welcome");
-  let ln = document.createElement("line");
-  ln.innerHTML = "welcome, " + cuser.username;
-  welcome.appendChild(ln);
+  if (getcurrentuser() == null) {
+    location.href = "login.html";
+  } else {
+    let cuser = getcurrentuser();
+    let welcome = document.getElementById("welcome");
+    let ln = document.createElement("line");
+    ln.innerHTML = "welcome, " + cuser.username;
+    welcome.appendChild(ln);
+  }
 }
 window.onload = showwelcome;
 

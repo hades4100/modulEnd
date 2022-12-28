@@ -100,9 +100,7 @@ function showposts() {
   }
 }
 
-//-------------------general setting
-
-window.onload = console.log(getposts());
+//-------------------general setting and onload
 
 function clearbox() {
   box.innerHTML = "";
