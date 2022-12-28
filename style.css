@@ -1,0 +1,384 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header.review {
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.subheader {
+  font-size: 55px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #56595b), color-stop(100%, #313737));
+  height: 80px;
+  z-index: 98;
+  border-bottom: 10px solid black;
+}
+.subheader .post-container {
+  position: relative;
+}
+.subheader .fa-regular {
+  position: absolute;
+  top: 25%;
+  right: 103%;
+  color: white;
+}
+.subheader .fa-house {
+  position: absolute;
+  top: 15%;
+  right: 45%;
+  color: white;
+}
+.subheader .subheaderbutton {
+  margin-right: 100px;
+  font-size: 35px;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.subheader .subheaderbutton:hover {
+  cursor: pointer;
+}
+
+.mainbox {
+  padding-right: 35px;
+  padding-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  min-height: 800px;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: rgb(172, 195, 206);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+line {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#postname {
+  width: 200px;
+  height: 35px;
+  font-size: 35px;
+}
+
+#txarea {
+  font-size: 35px;
+}
+
+.buttondiv {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.postclass {
+  padding-left: 15px;
+  background-color: rgb(172, 195, 206);
+  min-height: 50px;
+  width: 100%;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.postclass .fa-trash {
+  float: right;
+  position: relative;
+  right: 50px;
+  bottom: 80px;
+  color: white;
+  font-size: 35px;
+}
+.postclass .fa-trash:hover {
+  cursor: pointer;
+}
+.postclass .fa-pen-to-square {
+  float: right;
+  position: relative;
+  right: 65px;
+  bottom: 80px;
+  color: white;
+  font-size: 35px;
+}
+.postclass .fa-pen-to-square:hover {
+  cursor: pointer;
+}
+.postclass #submitedit {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.button-30 {
+  margin-top: 30px;
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 55px;
+}
+
+.button-30:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.bigbox {
+  font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url(photos/login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.box {
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  width: 700px;
+  border: 1px solid black;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.box input {
+  height: 25px;
+  font-size: 25px;
+  border: 1px solid black;
+}
+.box button:hover {
+  cursor: pointer;
+}
+.box #password {
+  height: 35px;
+  font-size: 25px;
+}
+.box .password-container {
+  position: relative;
+}
+.box .fa-eye {
+  position: absolute;
+  top: 18%;
+  right: 4%;
+  cursor: pointer;
+  color: lightgrey;
+}
+
+.reg {
+  width: 700px;
+  height: 600px;
+  top: 50%;
+  background: rgb(255, 255, 255);
+  justify-content: center;
+}
+.reg input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.reg .regeye {
+  top: 25%;
+}
+.reg select {
+  margin-bottom: 20px;
+}
+.reg #regpassword {
+  height: 35px;
+  font-size: 25px;
+}
+
+button {
+  font-size: 25px;
+}
+
+select {
+  font-size: 25px;
+}
+
+@font-face {
+  font-family: armyFont;
+  src: url(shooter.ttf);
+}
+body {
+  font-family: armyFont;
+  margin: 0;
+}
+
+.welcome {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  z-index: 99;
+  font-size: 35px;
+}
+
+.header {
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6c757d), color-stop(100%, #495057));
+  height: 250px;
+  z-index: 98;
+  border-bottom: 10px solid black;
+}
+.header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hbtn {
+  margin-left: 100px;
+  font-size: 45px;
+}
+.hbtn a {
+  text-decoration: none;
+  color: black;
+}
+.hbtn a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.Carousel {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Carousel .swiper {
+  width: 100%;
+  height: 700px;
+}
+.Carousel .swiper .swiper-slide img {
+  width: 100%;
+  object-fit: contain;
+}
+.Carousel .swiper #ssa {
+  background-image: url(photos/desert3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+}
+.Carousel .swiper #ssh {
+  background-image: url(photos/field.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -550px;
+}
+.Carousel .swiper #ssg {
+  background-image: url(photos/range.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -450px;
+}
+.Carousel .swiper #ssk {
+  background-image: url(photos/range2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -350px;
+}
+.Carousel .swiper-pagination {
+  color: darkred;
+}
+.Carousel .swiper-button-prev {
+  color: darkred;
+}
+.Carousel .swiper-button-next {
+  color: darkred;
+}
+
+.container {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6c757d), color-stop(100%, #495057));
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container .box1 {
+  flex: 1;
+  object-fit: contain;
+}
+.container .box1 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .box2 {
+  padding-right: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
+  text-align: center;
+  font-size: 35px;
+}
+
+/*# sourceMappingURL=style.css.map */

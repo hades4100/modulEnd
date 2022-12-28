@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="bigbox">
+      <div class="box" id="box">
+        <a3><u>User Name:</u></a3>
+        <input type="text" id="username" placeholder="user name" />
+        <a3><u>Password:</u></a3>
+        <div class="password-container">
+          <input type="text" id="password" placeholder="password" />
+          <i class="far fa-eye" id="togglePassword"></i>
+        </div>
+        <button id="submit">Submit</button>
+        <a3 style="color: blue"><u>New user? Register here:</u></a3>
+        <button id="register">Register</button>
+      </div>
+      <!-- --------------------------------------------------------------- -->
+      <div class="box reg" id="regbox">
+        <a3><u>User Name:</u></a3>
+        <input type="text" id="regusername" placeholder="user name" />
+        <a3><u>Password:</u></a3>
+        <div class="password-container">
+          <input type="text" id="regpassword" placeholder="password" />
+          <i class="far fa-eye regeye" id="togglePassword"></i>
+        </div>
+        <div class="weapon-container">
+          <a3><u>Weapon Manufecturer:</u></a3>
+          <select name="weapon" id="weapon">
+            <option value="dummy">--Please Select--</option>
+            <option value="glock">Glock</option>
+            <option value="sw">S&W</option>
+            <option value="sigsauer">Sig-Sauer</option>
+          </select>
+        </div>
+        <div class="submodel-container">
+          <a3><u>Submodel:</u></a3>
+          <select name="submodel" id="submodel"></select>
+        </div>
+        <button id="confirmregister">Register</button>
+      </div>
+    </div>
+    <script type="module" src="login.js"></script>
+  </body>
+</html>
