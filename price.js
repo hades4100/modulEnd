@@ -100,7 +100,7 @@ function createchart(guns, prices) {
       labels: guns,
       datasets: [
         {
-          label: "# of Votes",
+          label: "prices in ₪",
           data: prices,
           borderWidth: 1,
         },
