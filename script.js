@@ -11,28 +11,36 @@ export function showwelcome() {
     welcome.appendChild(ln);
   }
 }
-window.onload = showwelcome;
 
 //--------------------------carousel photo settings:-----------------------------------------------
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  direction: "horizontal",
-  loop: true,
+function listentoswiper() {
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    direction: "horizontal",
+    loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
+
+window.onload = () => {
+  if (window.location.href.match("index.html") != null) {
+    listentoswiper();
+    showwelcome();
+  }
+};

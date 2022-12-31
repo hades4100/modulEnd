@@ -1,0 +1,36 @@
+.aboutwrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vid-container {
+  video {
+    max-height: 1000px;
+    width: 100%;
+    object-fit: cover;
+    position: static;
+  }
+  height: 100%;
+  width: 100%;
+}
+
+.abouttext {
+  background-image: url("photos/ammo.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-width: 100%;
+  min-height: 800px;
+  border: 3px solid darkblue;
+  border-radius: 10px;
+  .textdiv {
+    padding: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
