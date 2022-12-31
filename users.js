@@ -32,6 +32,5 @@ export function getuserlist() {
 export function adduser(username, password, gun) {
   userlist.push(new user(username, password, gun));
   localStorage.setItem("userlist", JSON.stringify(userlist));
-  //   console.log("userlist origin:" + userlist);
 }
 window.onload = loadusers();

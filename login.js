@@ -1,14 +1,18 @@
 import { gun } from "./gun.js";
 import { getuserlist, adduser, getcurrentuser, setcurrentuser, userlist } from "./users.js";
 
-let regbutton = document.getElementById("register");
-regbutton.addEventListener("click", () => {
-  registeruser();
-  eye2();
-});
+function listentoregbutton() {
+  let regbutton = document.getElementById("register");
+  if (regbutton != null) {
+    regbutton.addEventListener("click", () => {
+      registeruser();
+      eye2();
+    });
+  }
+}
 
 function registeruser() {
-  //take you to register box
+  //redirect to register box
   let box = document.getElementById("box");
   box.style.display = "none";
   box.innerHTML = "";
@@ -17,7 +21,7 @@ function registeruser() {
   gunhandle();
 }
 
-function gunhandle() {
+export function gunhandle() {
   //populate gun options
   let submodel = document.getElementById("submodel");
   function addglockinfo() {
@@ -82,21 +86,21 @@ function gunhandle() {
   }
 }
 //-------------------------- new user registration click:
-
-let confirmreg = document.getElementById("confirmregister");
-confirmreg.addEventListener("click", () => {
-  let username = document.getElementById("regusername").value;
-  let password = document.getElementById("regpassword").value;
-  let model = document.getElementById("weapon").value;
-  let submodel = document.getElementById("submodel").value;
-  let temp = new gun(model, submodel);
-  adduser(username, password, temp);
-  alert("user successfully registered");
-  location.href = "login.html";
-  //   let restored = JSON.parse(localStorage.getItem("userlist"));
-  //   console.log(restored);
-});
-
+function listentoconfirmregister() {
+  let confirmreg = document.getElementById("confirmregister");
+  if (confirmreg != null) {
+    confirmreg.addEventListener("click", () => {
+      let username = document.getElementById("regusername").value;
+      let password = document.getElementById("regpassword").value;
+      let model = document.getElementById("weapon").value;
+      let submodel = document.getElementById("submodel").value;
+      let temp = new gun(model, submodel);
+      adduser(username, password, temp);
+      alert("user successfully registered");
+      location.href = "login.html";
+    });
+  }
+}
 //--------------------------password eye setting:
 function eye() {
   var togglePassword = document.querySelector("#togglePassword");
@@ -121,7 +125,6 @@ function eye2() {
     password.setAttribute("type", type);
   });
 }
-window.onload = eye();
 
 //--------------------------on load and general setting:
 
@@ -130,7 +133,6 @@ function hidereg() {
   let regbox = document.getElementById("regbox");
   regbox.style.display = "none";
 }
-window.onload = hidereg();
 //--------------------------login authentication:
 function auth() {
   let restored = JSON.parse(localStorage.getItem("userlist"));
@@ -155,16 +157,31 @@ function auth() {
   }
 }
 //--------------------------login authentication -- allowing Enter to be used:
-let submit = document.getElementById("submit");
-submit.addEventListener("click", auth);
-let passinput = document.getElementById("password");
-passinput.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    submit.click();
+function listentosubmit() {
+  let submit = document.getElementById("submit");
+  if (submit != null) {
+    submit.addEventListener("click", auth);
+    let passinput = document.getElementById("password");
+    passinput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        submit.click();
+      }
+    });
   }
-});
-//-------------------------- onLoad settings:
-window.onload = console.log("users list: " + localStorage.getItem("userlist"));
-window.onload = console.log(getuserlist());
+}
+
+//-------------------------- onLoad settings ---will rum only if login.html is loaded
+
+window.onload = () => {
+  if (window.location.href.match("login.html") != null) {
+    window.onload = eye();
+    window.onload = hidereg();
+    window.onload = listentoconfirmregister();
+    window.onload = listentoregbutton();
+    window.onload = listentosubmit();
+  }
+};
+// window.onload = console.log("users list: " + localStorage.getItem("userlist"));
+// window.onload = console.log(getuserlist());
 // window.onload = localStorage.clear();

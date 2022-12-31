@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prices</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="header price">
+      <img class="img" src="spears.png" height="250px" width="250px" />
+      <div class="hbtn"><a href="index.html">Home</a></div>
+      <div class="hbtn"><a href="review.html">Review</a></div>
+      <div class="hbtn"><a href="price.html">Prices</a></div>
+      <div class="hbtn"><a href="About.html">About</a></div>
+      <div class="hbtn"><a href="Contat US.html">Contact Us</a></div>
+      <div class="hbtn"><a href="login.html">Logout</a></div>
+      <div class="welcome" id="welcome"></div>
+    </div>
+    <div class="mainbox price" id="mainboxprice">
+      <div class="priceadd" id="priceadd">
+        <div class="weapon-container" id="wpn">
+          <a3>Weapon Manufecturer:</a3>
+          <select name="weapon" id="weapon">
+            <option value="dummy">--Please Select--</option>
+            <option value="glock">Glock</option>
+            <option value="sw">S&W</option>
+            <option value="sigsauer">Sig-Sauer</option>
+          </select>
+        </div>
+        <div class="submodel-container">
+          <a3>Submodel:</a3>
+          <select name="submodel" id="submodel"></select>
+        </div>
+        <div class="vendors">
+          <a3>Seller:</a3>
+          <select name="Seller" id="seller">
+            <option value="dummy">--Please Select--</option>
+          </select>
+        </div>
+        <a3>Price:</a3>
+        <input type="text" id="price" />
+        <a3>₪</a3>
+        <br />
+        <button class="button-30" id="submitprice">Submit price</button>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <a1>Choose Vendor</a1>
+          <select name="chartseller" id="chartseller">
+            <option value="dummy">--Please Select--</option>
+          </select>
+          <hr />
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="price.js"></script>
+  </body>
+</html>

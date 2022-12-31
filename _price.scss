@@ -1,0 +1,57 @@
+body {
+  background-color: lightgrey;
+}
+
+.mainbox.price {
+  margin-left: 0px;
+  padding-left: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  min-height: 800px;
+  margin-top: 0px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  input {
+    height: 35px;
+    font-size: 25px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+  }
+}
+.priceadd {
+  margin-bottom: 25px;
+  padding: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 80%;
+  min-height: 300px;
+}
+select,
+option {
+  font-size: 35px;
+}
+select {
+  margin-bottom: 20px;
+}
+
+.card {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+  max-width: fit-content;
+  min-width: 70%;
+  height: 100%;
+  padding: 10px;
+}
+hr {
+  width: 90%;
+  height: 2px;
+  color: black;
+  background-color: black;
+}

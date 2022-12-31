@@ -1,9 +1,6 @@
 @use "review.scss";
 @use "login.scss";
-
-$basecolor2: #a9af7e;
-$basecolor: #b09b71;
-$basecolor3: #63686e;
+@use "price.scss";
 
 @font-face {
   font-family: armyFont;

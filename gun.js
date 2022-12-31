@@ -4,3 +4,8 @@ export class gun {
     this.submodel = submodel;
   }
 }
+export function togunstring(gun) {
+  let temp = [gun.model, gun.submodel];
+  let resolved = temp.join();
+  return resolved;
+}
