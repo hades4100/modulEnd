@@ -28,16 +28,16 @@
   align-items: center;
   flex-wrap: wrap;
   input {
-    height: 25px;
-    font-size: 25px;
+    height: 40px;
+    font-size: 35px;
     border: 1px solid black;
   }
   button:hover {
     cursor: pointer;
   }
   #password {
-    height: 35px;
-    font-size: 25px;
+    height: 40px;
+    font-size: 35px;
   }
   .password-container {
     position: relative;
@@ -52,6 +52,7 @@
 }
 
 .reg {
+  text-align: center;
   width: 700px;
   height: 600px;
   top: 50%;
@@ -67,14 +68,14 @@
   select {
     margin-bottom: 20px;
   }
-  #regpassword {
-    height: 35px;
-    font-size: 25px;
-  }
 }
 button {
-  font-size: 25px;
+  font-size: 45px;
 }
 select {
   font-size: 25px;
+}
+#regpassword {
+  height: 40px;
+  font-size: 35px;
 }

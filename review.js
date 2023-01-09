@@ -81,12 +81,14 @@ function showposts() {
       function editcontent() {
         let thecontent = theposts[i].content;
         newdiv.removeChild(par);
+        newdiv.appendChild(document.createElement("br"));
         let txarea = document.createElement("textarea");
         txarea.setAttribute("id", "txarea");
         txarea.cols = "80";
         txarea.rows = "4";
         txarea.value = thecontent;
         newdiv.appendChild(txarea);
+        newdiv.appendChild(document.createElement("br"));
         let submitedit = document.createElement("button");
         submitedit.innerHTML = "submit";
         submitedit.setAttribute("id", "submitedit");
